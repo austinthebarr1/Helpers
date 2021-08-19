@@ -1,3 +1,4 @@
+// File should write to D:\sea\ses\siebsrvr\log
 var fileName = "";
 TheApplication().TraceOn(
   "..\\Log\\" + fileName + new Date().getUTCMilliseconds() + ".txt",
@@ -12,3 +13,6 @@ var log = (function createLogger() {
     TheApplication().Trace("STEP" + count + " " + message);
   };
 })();
+
+// To run simply put at top of function you would like to use the logger.
+// then place: log("YOURMESSAGE" || String Variable) where ever you would like to log data.
