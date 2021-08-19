@@ -12,11 +12,3 @@ var log = (function createLogger() {
     TheApplication().Trace("STEP" + count + " " + message);
   };
 })();
-
-(function createLogger() {
-  var count = 0;
-  return function (message) {
-    count += 1;
-    console.log("STEP" + count + " " + message);
-  };
-})();
